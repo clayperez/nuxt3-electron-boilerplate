@@ -1,12 +1,14 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 and Electron Starter
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Chased all over the place to figure out how to get Nuxt 3 and Electron to work together. Finally cracked it. The frustrating parts seemed to turn out to be where to put stuff, and how to tell NUXT to build it. I guess?...
 
-## HELPFUL!!
+### This was helpful in figuring shit out:
 
 https://github.com/gurvan-guss/nuxt-electron-sample/blob/master/electron/main.ts
 
 ## Setup
+
+#### Install dependencies
 
 Make sure to install the dependencies:
 
@@ -16,31 +18,29 @@ yarn install
 
 # npm
 npm install
-
-# pnpm
-pnpm install --shamefully-hoist
 ```
 
-## Development Server
+#### Configure Electron Build
 
-Start the development server on http://localhost:3000
+1. Configure Electron's `build` parameter for your preferred configuration inside package.json.
+
+## Development
+
+Start a nuxt-electron HMR dev app that you can go crazy with:
 
 ```bash
+# yarn
+yarn dev
+
+# npm
 npm run dev
 ```
 
-## Production
+## Build
 
-Build the application for production:
+Build the application for distribution. This puts a packaged distributable inside the "dist" folder in the root of your app:
 
 ```bash
+yarn build
 npm run build
 ```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

@@ -17,14 +17,30 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 ));
 var import_path = __toESM(require("path"));
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, shell } = require("electron");
+const preload = import_path.default.join(__dirname, "preload.js");
 const distPath = import_path.default.join(__dirname, "../.output/public");
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
-    height: 600
+    height: 600,
+    webPreferences: {
+      preload,
+      nodeIntegration: false,
+      contextIsolation: true
+    }
   });
-  win.loadFile(import_path.default.join(distPath, "index.html"));
+  if (app.isPackaged) {
+    win.loadFile(import_path.default.join(distPath, "index.html"));
+  } else {
+    win.loadURL(process.env.VITE_DEV_SERVER_URL);
+    win.webContents.openDevTools();
+  }
+  win.webContents.setWindowOpenHandler(({ url }) => {
+    if (url.startsWith("https:"))
+      shell.openExternal(url);
+    return { action: "deny" };
+  });
 };
 app.whenReady().then(() => {
   createWindow();

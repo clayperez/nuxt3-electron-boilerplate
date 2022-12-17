@@ -4,24 +4,19 @@
   "name": "ccp",
   "version": "0.0.0",
   "scripts": {
-    "build": "nuxt build",
+    "build": "nuxt generate && electron-builder",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "start": "concurrently \"nuxt dev\" \"electron .\"",
-    "pack": "nuxt generate && electron-builder",
-    "elbu": "electron-builder"
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "concurrently": "^7.6.0",
     "electron": "^22.0.0",
     "electron-builder": "^23.6.0",
     "nuxt": "3.0.0",
     "nuxt-electron": "^0.2.0"
   },
   "build": {
-    "appId": "ccp-nuxt3-app",
-    "asar": false
+    "appId": "ccp-nuxt3-app"
   }
 }
