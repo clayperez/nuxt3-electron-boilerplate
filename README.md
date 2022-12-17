@@ -6,18 +6,19 @@ Chased all over the place to figure out how to get Nuxt 3 and Electron to work t
 
 https://github.com/gurvan-guss/nuxt-electron-sample/blob/master/electron/main.ts
 
-## Setup
+## Quickstart: Clone and Install
 
-#### Install dependencies
-
-Make sure to install the dependencies:
+For people who are shy with GIT...
 
 ```bash
-# yarn
-yarn install
+# Close this repo to your system
+git clone git@github.com:clayperez/nuxt3-electron-boilerplate.git <destination_folder>
 
-# npm
-npm install
+# move to the app directory
+cd <destination_folder>
+
+# Install dependencies
+yarn install
 ```
 
 #### Configure Electron Build
