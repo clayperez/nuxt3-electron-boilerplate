@@ -1,12 +1,21 @@
-# Nuxt 3 and Electron Starter
+# Nuxt 3 and Electron Quickstart
 
-Chased all over the place to figure out how to get Nuxt 3 and Electron to work together. Finally cracked it. The frustrating parts seemed to turn out to be where to put stuff, and how to tell NUXT to build it. I guess?...
+[ 2022-12-17 ]
+This is a working quickstart for NUXT3 and Electron (meaning Vue3!)
 
-### This was helpful in figuring shit out:
+Credit for helping figure stuff out goes to [Gurvan-guss](https://github.com/gurvan-guss).
 
-https://github.com/gurvan-guss/nuxt-electron-sample/blob/master/electron/main.ts
+Ultimately, I had to refactor things to get this to work on OSX. Here is the result. You should be able to clone this and get started developing right away. If I run into things that need to be fixed up, I'll try to keep this quickstart boilerplate up to date.
 
-## Quickstart: Clone and Install
+### Environment
+
+Here are the versions of core software that makes this work for now:
+
+- Node 19.2.0
+- Electron 22.0.0
+- Nuxt 3.0.0
+
+# Quickstart: Clone and Install
 
 For people who are shy with GIT...
 
