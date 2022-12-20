@@ -15,6 +15,11 @@ Here are the versions of core software that makes this work for now:
 - Electron 22.0.0
 - Nuxt 3.0.0
 
+#### Tailwind CSS
+
+I also like to start with [Tailwind](https://tailwindcss.com/).  
+[These installation instructions work for NUXT 3](https://tailwindcss.com/docs/guides/nuxtjs#3)
+
 # Quickstart: Clone and Install
 
 For people who are shy with GIT...
